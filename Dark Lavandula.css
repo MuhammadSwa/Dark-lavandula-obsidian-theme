@@ -1,0 +1,254 @@
+.theme-light,
+.theme-dark {
+  /* Colors: */
+  --background-primary: #12121a;
+  --background-primary-alt: #12121a;
+  --background-secondary: #191924;
+  --background-secondary-alt: #1c1c29;
+
+  --text-accent: #e71d36;
+  --text-accent-hover: #d62e73;
+  --scrollbar-thumb-bg: rgb(255 255 255 / 10%);
+  --scrollbar-active-thumb-bg: rgb(163 150 195 / 25%);
+  --text-selection: rgb(21 50 54 / 98%);
+  --text-on-accent: #f8f7f9;
+
+  --background-blockquote: #41d3bd;
+  --blockquote-color: #1e202f;
+  --blockquote-size: 18px;
+  --blockquote-font-family: "Hack";
+
+  --text-title-h1: #ff3cd5;
+  --text-title-h2: #f7768e;
+  --text-title-h3: #4e937a;
+  --text-title-h4: #ff9e64;
+  --text-title-h5: #ff5757;
+  --text-title-h6: #0af7ff;
+  /* --text-normal: wheat; */
+  --text-normal: #f8f7f9;
+  --text-muted: white;
+  --text-faint: rebeccapurple;
+
+  --blockquote-border: #ffb86c;
+
+  --font-weight-title: 600;
+  --font-monospace: "Consolas", "Fira Code", "Source Code Pro",
+    "Droid Sans Mono", "Monoid", "Arial", sans-serif;
+  --line-height-headers: 1.4;
+  --font-family-preview: "Hack", sans-serif;
+  --font-family-editor: "Hack", sans-serif;
+
+  --font-size-normal: 18px;
+  --font-size-status-bar: 15px;
+  --font-size-h1: 30px;
+  --font-size-h2: 25px;
+  --font-size-h3: 21px;
+  --font-size-h4: 20px;
+  --font-size-h5: 19px;
+  --font-size-h6: 18px;
+}
+
+.markdown-source-view {
+  font-size: var(--font-size-normal);
+}
+.markdown-preview-view {
+  font-size: var(--font-size-normal);
+}
+/* headings preview-view */
+.markdown-preview-view h1 {
+  font-size: var(--font-size-h1);
+  font-family: var(--font-family-preview);
+  font-weight: var(--font-weight-title);
+  color: var(--text-title-h1);
+  line-height: var(--line-height-headers);
+}
+
+.markdown-preview-view h2 {
+  font-size: var(--font-size-h2);
+  font-family: var(--font-family-preview);
+  font-weight: var(--font-weight-title);
+  color: var(--text-title-h2);
+  line-height: var(--line-height-headers);
+}
+
+.markdown-preview-view h3 {
+  font-size: var(--font-size-h3);
+  font-family: var(--font-family-preview);
+  font-weight: var(--font-weight-title);
+  color: var(--text-title-h3);
+  line-height: var(--line-height-headers);
+}
+
+.markdown-preview-view h4 {
+  font-size: var(--font-size-h4);
+  font-family: var(--font-family-preview);
+  font-weight: var(--font-weight-title);
+  color: var(--text-title-h4);
+  line-height: var(--line-height-headers);
+}
+
+.markdown-preview-view h5 {
+  font-size: var(--font-size-h5);
+  font-family: var(--font-family-preview);
+  font-weight: var(--font-weight-title);
+  color: var(--text-title-h5);
+  line-height: var(--line-height-headers);
+}
+
+.markdown-preview-view h6 {
+  font-size: var(--font-size-h6);
+  font-family: var(--font-family-preview);
+  font-weight: var(--font-weight-title);
+  color: var(--text-title-h6);
+  line-height: var(--line-height-headers);
+}
+
+/* headings-editor */
+.cm-header-1 {
+  font-size: var(--font-size-h1);
+  font-family: var(--font-family-editor);
+  font-weight: var(--font-weight-title) !important;
+  color: var(--text-title-h1);
+  line-height: var(--line-height-headers);
+}
+
+.cm-header-2 {
+  font-size: var(--font-size-h2);
+  font-family: var(--font-family-editor);
+  font-weight: var(--font-weight-title) !important;
+  color: var(--text-title-h2);
+  line-height: var(--line-height-headers);
+}
+
+.cm-header-3 {
+  font-size: var(--font-size-h3);
+  font-family: var(--font-family-editor);
+  font-weight: var(--font-weight-title) !important;
+  color: var(--text-title-h3);
+  line-height: var(--line-height-headers);
+}
+
+.cm-header-4 {
+  font-size: var(--font-size-h4);
+  font-family: var(--font-family-editor);
+  font-weight: var(--font-weight-title) !important;
+  color: var(--text-title-h4);
+  line-height: var(--line-height-headers);
+}
+
+.cm-header-5 {
+  font-size: var(--font-size-h5);
+  font-family: var(--font-family-editor);
+  font-weight: var(--font-weight-title) !important;
+  color: var(--text-title-h5);
+  line-height: var(--line-height-headers);
+}
+
+.cm-header-6 {
+  font-size: var(--font-size-h6);
+  font-family: var(--font-family-editor);
+  font-weight: var(--font-weight-title) !important;
+  color: var(--text-title-h6);
+  line-height: var(--line-height-headers);
+}
+
+/* links */
+.cm-formatting-link-start,
+.cm-formatting-link-end {
+  color: #984322 !important;
+}
+
+/* tags */
+a.tag,
+.cm-hashtag {
+  color: #cdae74 !important;
+}
+
+/* Status_bar */
+.status-bar {
+  font-size: var(--font-size-status-bar);
+  background-color: var(--background-secondary);
+  border-top: 0px;
+}
+
+/* Blockquotes */
+.markdown-preview-view blockquote {
+  background-color: var(--background-blockquote);
+  color: var(--blockquote-color);
+  font-size: var(--blockquote-size);
+  font-family: var(--blockquote-font-family);
+}
+
+/* Svgs */
+svg {
+  color: #f8f7f9;
+}
+/* search */
+
+.search-result-file-matched-text {
+  color: #0d1117;
+  background-color: #db7c26;
+}
+
+.cm-s-obsidian span.obsidian-search-match-highlight {
+  color: #0d1117;
+  background-color: #db7c26;
+}
+
+.markdown-rendered .search-highlight > div {
+  position: absolute;
+  pointer-events: none;
+  background-color: #161b22;
+  mix-blend-mode: lighten;
+  border-bottom: 0.2em solid #ff9632;
+}
+
+.markdown-rendered .search-highlight > div.is-active {
+  background-color: #161b22;
+  border-bottom: 0.2em solid #ff9632;
+}
+.search-result-file-title {
+  color: var(--blue);
+}
+
+/* side_bar */
+.side-dock-ribbon-action {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.workspace-ribbon:hover .side-dock-ribbon-action {
+  opacity: 1;
+}
+/* Calendar plugin  */
+
+/* title */
+#calendar-container .nav .title .month {
+  color: #ff4000;
+}
+
+#calendar-container .nav .title .year {
+  color: #ff958c;
+}
+
+/* days row*/
+#calendar-container .calendar thead tr th {
+  color: #ff958c;
+}
+/* weeks col */
+#calendar-container .calendar .week-num {
+  color: #ef7c60;
+}
+/* today's item */
+#calendar-container .calendar .day.today {
+  color: #000;
+  background-color: #f18f01;
+  font-size: 14px;
+}
+/* days */
+#calendar-container .calendar .day {
+  color: wheat;
+}
+#calendar-container .nav .right-nav .arrow svg,
+#calendar-container .nav .right-nav .reset-button {
+  color: wheat !important;
+}
