@@ -1,50 +1,68 @@
+/*===============================================================================
+ ____             _        _                               _       _  
+|  _ \  __ _ _ __| | __   | |    __ ___   ____ _ _ __   __| |_   _| | __ _ 
+| | | |/ _` | '__| |/ /   | |   / _` \ \ / / _` | '_ \ / _` | | | | |/ _` |
+| |_| | (_| | |  |   <    | |__| (_| |\ V / (_| | | | | (_| | |_| | | (_| |
+|____/ \__,_|_|  |_|\_\   |_____\__,_| \_/ \__,_|_| |_|\__,_|\__,_|_|\__,_|
+ _____ _                           
+|_   _| |__   ___ _ __ ___   ___ 
+  | | | '_ \ / _ \ '_ ` _ \ / _ \
+  | | | | | |  __/ | | | | |  __/
+  |_| |_| |_|\___|_| |_| |_|\___|
+
+================================================================================= */
+
+/** ----- TABLE OF CONTENTS ----- */
+
 .theme-dark {
   /* Colors: */
+  --background-modifier-cover: rgba(0, 0, 0, 0.2); /*Obsidian Title Bar Bg*/
   --background-primary: #12121a;
   --background-primary-alt: #12121a;
   --background-secondary: #191924;
   --background-secondary-alt: #1c1c29;
 
+  --text-title-h1: #4e937a;
+  --text-title-h2: #fe8019;
+  --text-title-h3: #049f9a;
+  --text-title-h4: #df34e7c4;
+  --text-title-h5: #6c75bb;
+  --text-title-h6: #a9a9a9;
+
   --text-accent: #e71d36;
   --text-accent-hover: #d62e73;
-  --scrollbar-thumb-bg: rgb(255 255 255 / 10%);
-  --scrollbar-active-thumb-bg: rgb(163 150 195 / 25%);
   --text-selection: rgb(21 50 54 / 98%);
   --text-on-accent: #f8f7f9;
+  --text-normal: #f8f7f9;
+  --text-muted: #fff;
+  --text-faint: rebeccapurple;
+  --border-color: purple;
+
+  --scrollbar-thumb-bg: rgb(255 255 255 / 10%);
+  --scrollbar-active-thumb-bg: rgb(163 150 195 / 25%);
 
   --background-blockquote: #41d3bd;
   --blockquote-color: #1e202f;
   --blockquote-size: 18px;
   --blockquote-font-family: "Hack";
-
-  --text-title-h1: #ff3cd5;
-  --text-title-h2: #f7768e;
-  --text-title-h3: #4e937a;
-  --text-title-h4: #ff9e64;
-  --text-title-h5: #ff5757;
-  --text-title-h6: #0af7ff;
-  /* --text-normal: wheat; */
-  --text-normal: #f8f7f9;
-  --text-muted: white;
-  --text-faint: rebeccapurple;
-
   --blockquote-border: #ffb86c;
 
   --font-weight-title: 600;
   --font-monospace: "Consolas", "Fira Code", "Source Code Pro",
     "Droid Sans Mono", "Monoid", "Arial", sans-serif;
   --line-height-headers: 1.4;
-  --font-family-preview: "Hack", sans-serif;
-  --font-family-editor: "Hack", sans-serif;
+  --font-family-preview: serif;
+  --font-family-editor: sans-serif;
 
   --font-size-normal: 18px;
   --font-size-status-bar: 15px;
-  --font-size-h1: 30px;
-  --font-size-h2: 25px;
-  --font-size-h3: 21px;
-  --font-size-h4: 20px;
-  --font-size-h5: 19px;
+  --font-size-h1: 38px;
+  --font-size-h2: 34px;
+  --font-size-h3: 30px;
+  --font-size-h4: 26px;
+  --font-size-h5: 22px;
   --font-size-h6: 18px;
+  --line-height: 26px;
 }
 
 .markdown-source-view {
@@ -53,6 +71,21 @@
 .markdown-preview-view {
   font-size: var(--font-size-normal);
 }
+.cm-line {
+  line-height: var(--line-height);
+}
+
+/* Graph */
+.graph-view.color-circle,
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight {
+  /* color: var(--text-title-h5) !important; */
+  color: #33184e !important;
+}
+.graph-view.color-text {
+  color: #b52a2a !important;
+}
+
 /* headings preview-view */
 .markdown-preview-view h1 {
   font-size: var(--font-size-h1);
@@ -76,6 +109,7 @@
   font-weight: var(--font-weight-title);
   color: var(--text-title-h3);
   line-height: var(--line-height-headers);
+  border-radius: 10px;
 }
 
 .markdown-preview-view h4 {
@@ -84,6 +118,7 @@
   font-weight: var(--font-weight-title);
   color: var(--text-title-h4);
   line-height: var(--line-height-headers);
+  border-radius: 10px;
 }
 
 .markdown-preview-view h5 {
@@ -92,6 +127,7 @@
   font-weight: var(--font-weight-title);
   color: var(--text-title-h5);
   line-height: var(--line-height-headers);
+  border-radius: 10px;
 }
 
 .markdown-preview-view h6 {
@@ -100,61 +136,65 @@
   font-weight: var(--font-weight-title);
   color: var(--text-title-h6);
   line-height: var(--line-height-headers);
+  border-radius: 10px;
 }
 
 /* headings-editor */
-.cm-header-1 {
-  font-size: var(--font-size-h1);
+/* .HyperMD-header .cm-header-1, */
+/* .HyperMD-header .cm-header-2, */
+/* .HyperMD-header .cm-header-3, */
+/* .HyperMD-header .cm-header-4, */
+/* .HyperMD-header .cm-header-5, */
+/* .HyperMD-header .cm-header-6 { */
+/*   font-size: unset !important; */
+/* } */
+.HyperMD-header {
   font-family: var(--font-family-editor);
   font-weight: var(--font-weight-title) !important;
+  line-height: var(--line-height-headers);
+  /* border-bottom: 2px solid #fff; */
+  /* border-image: linear-gradient(to right, purple, var(--background-primary) 30%) */
+  /*   10; */
+}
+.HyperMD-header .cm-header-1 {
+  font-size: var(--font-size-h1) !important;
   color: var(--text-title-h1);
-  line-height: var(--line-height-headers);
 }
-
-.cm-header-2 {
-  font-size: var(--font-size-h2);
-  font-family: var(--font-family-editor);
-  font-weight: var(--font-weight-title) !important;
+.HyperMD-header .cm-header-2 {
+  font-size: var(--font-size-h2) !important;
   color: var(--text-title-h2);
-  line-height: var(--line-height-headers);
 }
 
-.cm-header-3 {
-  font-size: var(--font-size-h3);
-  font-family: var(--font-family-editor);
-  font-weight: var(--font-weight-title) !important;
+.HyperMD-header .cm-header-3 {
+  font-size: var(--font-size-h3) !important;
   color: var(--text-title-h3);
-  line-height: var(--line-height-headers);
 }
 
-.cm-header-4 {
-  font-size: var(--font-size-h4);
-  font-family: var(--font-family-editor);
-  font-weight: var(--font-weight-title) !important;
+.HyperMD-header .cm-header-4 {
+  font-size: var(--font-size-h4) !important ;
   color: var(--text-title-h4);
-  line-height: var(--line-height-headers);
 }
 
-.cm-header-5 {
-  font-size: var(--font-size-h5);
-  font-family: var(--font-family-editor);
-  font-weight: var(--font-weight-title) !important;
+.HyperMD-header .cm-header-5 {
+  font-size: var(--font-size-h5) !important;
   color: var(--text-title-h5);
-  line-height: var(--line-height-headers);
 }
 
-.cm-header-6 {
-  font-size: var(--font-size-h6);
-  font-family: var(--font-family-editor);
-  font-weight: var(--font-weight-title) !important;
+.HyperMD-header .cm-header-6 {
+  font-size: var(--font-size-h6) !important;
   color: var(--text-title-h6);
-  line-height: var(--line-height-headers);
 }
 
 /* links */
 .cm-formatting-link-start,
 .cm-formatting-link-end {
   color: #984322 !important;
+}
+.markdown-source-view.mod-cm6 .cm-underline {
+  text-decoration: none;
+}
+.markdown-rendered .internal-link {
+  text-decoration: none;
 }
 
 /* tags */
@@ -218,6 +258,73 @@ svg {
 .workspace-ribbon:hover .side-dock-ribbon-action {
   opacity: 1;
 }
+
+/** .... 2.12 Horizontal Rule Formatting */
+/** ...... 2.12.1 Aesthetic Horizontal Rule -- https://github.com/TriDiamond/Obsidian-Obsidianite */
+.markdown-preview-view hr {
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    var(--background-primary),
+    var(--text-accent),
+    var(--background-primary)
+  );
+}
+.markdown-preview-view hr::after {
+  /* content: '§'; */
+  content: "🐈";
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transform-origin: 50% 50%;
+  padding: 0.5rem;
+  background-color: var(--background-primary);
+}
+.markdown-source-view hr {
+  margin-block-start: 4em;
+  margin-block-end: 4em;
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    var(--background-primary),
+    var(--text-accent),
+    var(--background-primary)
+  );
+}
+.markdown-source-view hr::after {
+  /* content: '§'; */
+  content: "🐈";
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transform-origin: 50% 50%;
+  padding: 0.5rem;
+  color: var(--bright-aqua);
+  background-color: var(--background-primary);
+}
+
+/* images */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* highlights */
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight {
+  color: #d1fffd;
+  background-color: rgb(120 0 38);
+}
+.markdown-rendered mark {
+  color: #d1fffd;
+  background-color: rgb(120 0 38);
+}
+
 /* Calendar plugin  */
 
 /* title */
@@ -251,3 +358,22 @@ svg {
 #calendar-container .nav .right-nav .reset-button {
   color: wheat !important;
 }
+.theme-dark,
+.theme-light {
+  --jump-to-link-lightspeed-color: var(--text-muted);
+}
+
+/* For the Jump To Link plugin */
+.jl.popover {
+  background: var(--background-primary) !important;
+  border-style: none !important;
+}
+.jl.popover span {
+  color: purple;
+  font-style: italic;
+  font-size: 13px;
+
+}
+/* * { */
+/*     unicode-bidi: plaintext; */
+/* } */
